@@ -15,3 +15,5 @@ script:
   sh
 after_failure:
 - cat role-tester-ansible-master/.kitchen/logs/*.log | grep -v '^I, '
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
